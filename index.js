@@ -53,7 +53,7 @@ var yargs = require('yargs')
     })
     .option('l', {
       alias: 'limit',
-      default: process.env.LIMIT || '1kb',  
+      default: process.env.LIMIT || '1kb',
       demand: false,
       describe: 'request limit'
     })
@@ -153,7 +153,7 @@ proxy.on('proxyRes', function (proxyReq, req, res) {
     }
 });
 
-http.createServer(app).listen(PORT, BIND_ADDRESS);
+http.createServer(app).listen(PORT);
 
 if(!argv.s) {
     console.log(figlet.textSync('AWS ES Proxy!', {
